@@ -1,6 +1,8 @@
 // import './globals.css'
+"use client"
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,6 +12,11 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+  const router = useRouter()
+  const onClickURL = (url) => {
+    router.push(url)
+  }
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -20,9 +27,7 @@ export default function RootLayout({ children }) {
           <li>
             <Link href="/dashboard">Dashboard</Link>
           </li>
-          <li>
-            <Link href="/settings">Settings</Link>
-          </li>
+          <li style={{backgroundColor: 'black',color: 'white', width: '60px', textAlign: 'center', cursor: 'pointer',padding: '5px', border: 'none', borderRadius: '6px'}} onClick={() => onClickURL('/settings')}>Settings</li>
         </ul>
         {children}
         <div>Footer</div>
