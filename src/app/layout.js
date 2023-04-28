@@ -1,5 +1,5 @@
-// import './globals.css'
 "use client"
+import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -20,14 +20,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ul>
-          <li>
+        <ul className="flex gap-3 mt-5 ml-3 mb-5">
+          <li className="bg-sky-600 py-1 px-2 rounded-lg shadow-lg hover:scale-105 duration-500 text-white font-bold hover:bg-gradient-to-t from-sky-600 to-sky-400">
             <Link href="/">Home</Link>
           </li>
-          <li>
+          <li className="bg-sky-600 py-1 px-2 rounded-lg shadow-lg hover:scale-105 duration-500 text-white font-bold hover:ring-slate-800 hover:bg-gradient-to-t from-sky-600 to-sky-400">
             <Link href="/dashboard">Dashboard</Link>
           </li>
-          <li style={{backgroundColor: 'black',color: 'white', width: '60px', textAlign: 'center', cursor: 'pointer',padding: '5px', border: 'none', borderRadius: '6px'}} onClick={() => onClickURL('/settings')}>Settings</li>
+          <li
+            className="bg-sky-600 py-1 px-2 rounded-lg cursor-pointer shadow-lg hover:scale-105 duration-500 text-white font-bold hover:ring-slate-800 hover:bg-gradient-to-t from-sky-600 to-sky-400"
+            onClick={() => onClickURL("/settings")}
+          >
+            Settings
+          </li>
         </ul>
         {children}
         <div>Footer</div>
