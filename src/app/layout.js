@@ -36,6 +36,9 @@ export default function RootLayout({ children }) {
           <li className="bg-sky-600 py-1 px-2 rounded-lg shadow-lg hover:scale-105 duration-500 text-white font-bold hover:ring-slate-800 hover:bg-gradient-to-t from-sky-600 to-sky-400">
             <Link href="/calculator">Calculator</Link>
           </li>
+          <li className="bg-sky-600 py-1 px-2 rounded-lg shadow-lg hover:scale-105 duration-500 text-white font-bold hover:ring-slate-800 hover:bg-gradient-to-t from-sky-600 to-sky-400">
+            <Link href="/search">search</Link>
+          </li>
         </ul>
         {children}
         {/* <div>Footer</div> */}
