@@ -22,7 +22,7 @@ export default function page() {
           Search
         </button>
       </form>
-      <p className='mt-3 text-xl font-serif'>{"Searching : " + query}</p>
+        <sectionResults query={query} />
     </div>
   );
 }
